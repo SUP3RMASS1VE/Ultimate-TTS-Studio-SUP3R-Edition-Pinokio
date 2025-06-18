@@ -15,7 +15,7 @@ module.exports = {
       params: {
         uri: "torch.js",
         params: {
-          venv: "env",                // Edit this to customize the venv folder path
+          conda: "tts_env",                // Edit this to customize the conda folder path
           path: "app",                // Edit this to customize the path to start the shell from
           // xformers: true   // uncomment this line if your project requires xformers
           // triton: true   // uncomment this line if your project requires triton
@@ -27,11 +27,13 @@ module.exports = {
     {
       method: "shell.run",
       params: {
-        venv: "env",                // Edit this to customize the venv folder path
+        conda: "tts_env",                // Edit this to customize the conda folder path
         path: "app",                // Edit this to customize the path to start the shell from
         message: [
+          "conda install -c conda-forge pynini==2.1.6 -y",
           "uv pip install gradio devicetorch",
           "uv pip install -r requirements.txt",
+          "uv pip install WeTextProcessing --no-deps",
           "pip uninstall phonemizer-fork -y",
           "pip install phonemizer-fork"
         ]

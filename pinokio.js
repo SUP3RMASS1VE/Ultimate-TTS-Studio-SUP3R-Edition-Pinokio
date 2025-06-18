@@ -5,7 +5,7 @@ module.exports = {
   description: "Kokoro, ChatterBox and Fish-Speech in one app",
   icon: "icon.png",
   menu: async (kernel, info) => {
-    let installed = info.exists("app/env")
+    let installed = info.exists("app/tts_env")
     let running = {
       install: info.running("install.js"),
       start: info.running("start.js"),
