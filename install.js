@@ -20,7 +20,8 @@ module.exports = {
           "uv pip install WeTextProcessing --no-deps",
           "pip uninstall phonemizer-fork -y",
           "pip install phonemizer-fork",
-          "uv pip install --upgrade --force-reinstall --no-deps --no-cache-dir onnxruntime-gpu==1.22.0"
+          "uv pip install --upgrade --force-reinstall --no-deps --no-cache-dir onnxruntime-gpu==1.22.0",
+          "uv pip install voxcpm openai-whisper --no-deps"
         ]
       }
     },
