@@ -2,7 +2,7 @@ const path = require('path')
 module.exports = {
   version: "3.7",
   title: "Ultimate-TTS-Studio-SUP3R-Edition",
-  description: "Kokoro, ChatterBox and Fish-Speech in one app",
+  description: "Kokoro, KittenTTS, Higgs audio, Chatterbox, Fish-Speech, F5 & index-tts & indextts2, VoxCPM in one app",
   icon: "icon.png",
   menu: async (kernel, info) => {
     let installed = info.exists("app/tts_env")
@@ -99,3 +99,4 @@ module.exports = {
     }
   }
 }
+
