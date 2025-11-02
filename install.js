@@ -37,11 +37,10 @@ module.exports = {
       }
     },
     {
-      method: "hf.download",
+      method: "shell.run",
       params: {
         path: "app",
-        "_": [ "cocktailpeanut/oa" ],
-        "--local-dir": "./checkpoints/openaudio-s1-mini",
+        message: "hf download cocktailpeanut/oa --local-dir ./checkpoints/openaudio-s1-mini",
       }
     },
     {
