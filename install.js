@@ -1,4 +1,7 @@
 module.exports = {
+  requires: {
+    bundle: "ai",
+  },
   run: [
     {
       method: "shell.run",
@@ -15,6 +18,7 @@ module.exports = {
         path: "app",
         message: [
           "conda install -c conda-forge pynini==2.1.6 -y",
+          "conda install -y -c conda-forge portaudio",
           "uv pip install gradio devicetorch",
           "uv pip install -r requirements.txt",
           "uv pip install WeTextProcessing --no-deps",
@@ -87,4 +91,3 @@ module.exports = {
     },
   ]
 }
-
