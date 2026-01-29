@@ -1,4 +1,4 @@
-module.exports = {
+          module.exports = {
   requires: {
     bundle: "ai",
   },
@@ -60,7 +60,7 @@ module.exports = {
       method: "shell.run",
       params: {
         sudo: true,
-        message: "apt install libaio-dev espeak-ng"
+        message: "apt-get install -y libaio-dev espeak-ng sox libsox-fmt-all"
       },
       next: 'end'
     },
@@ -69,7 +69,7 @@ module.exports = {
       method: "shell.run",
       params: {
         sudo: true,
-        message: "yum install libaio-devel espeak-ng"
+        message: "yum install -y libaio-devel espeak-ng sox"
       },
       next: 'end'
     },
@@ -78,7 +78,10 @@ module.exports = {
       method: "shell.run",
       params: {
         sudo: true,
-        message: "winget install --id=eSpeak-NG.eSpeak-NG -e --silent --accept-source-agreements --accept-package-agreements"
+        message: [
+          "winget install --id=eSpeak-NG.eSpeak-NG -e --silent --accept-source-agreements --accept-package-agreements",
+          "winget install --id=ChrisBagwell.SoX -e --silent --accept-source-agreements --accept-package-agreements --force --disable-interactivity"
+        ]
       }
     },
     {
@@ -90,4 +93,4 @@ module.exports = {
       }
     },
   ]
-}
+          }
